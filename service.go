@@ -186,6 +186,7 @@ type (
 		ServiceIntegrations   []NewServiceIntegration `json:"service_integrations"`
 		DiskSpaceMB           int                     `json:"disk_space_mb,omitempty"`
 		StaticIPs             []string                `json:"static_ips,omitempty"`
+		Tags                  map[string]string       `json:"tags,omitempty"`
 	}
 
 	// UpdateServiceRequest are the parameters to update a Service.
@@ -200,6 +201,7 @@ type (
 		UserConfig            map[string]interface{} `json:"user_config,omitempty"`
 		DiskSpaceMB           int                    `json:"disk_space_mb,omitempty"`
 		Karapace              *bool                  `json:"karapace,omitempty"`
+		Tags                  map[string]string      `json:"tags,omitempty"`
 	}
 
 	// ServiceResponse represents the response from Aiven after interacting with
